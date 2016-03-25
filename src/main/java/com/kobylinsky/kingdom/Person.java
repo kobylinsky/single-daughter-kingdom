@@ -5,9 +5,9 @@ package com.kobylinsky.kingdom;
  */
 public class Person {
     private static long nextId;
-    long id;
-    Sex sex;
-    boolean coupled;
+    private long id;
+    private Sex sex;
+    private boolean coupled;
 
     public Person(Sex sex) {
         nextId++;
@@ -19,6 +19,18 @@ public class Person {
     public boolean doesFitTo(Person candidateForMarraige) {
         return sex != candidateForMarraige.sex &&
                 !coupled && !candidateForMarraige.coupled;
+    }
+
+    public Sex getSex() {
+        return sex;
+    }
+
+    public void setCoupled(boolean coupled) {
+        this.coupled = coupled;
+    }
+
+    public boolean isCoupled() {
+        return coupled;
     }
 
     @Override

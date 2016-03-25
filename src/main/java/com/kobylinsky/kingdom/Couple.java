@@ -4,18 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Couple consist of two parents and children.
+ *
  * @author bogdankobylinsky
  */
 public class Couple {
-    Person parent1;
-    Person parent2;
-    List<Person> children = new ArrayList<>();
+
+    private Person parent1;
+    private Person parent2;
+    private List<Person> children = new ArrayList<>();
 
     public Couple(Person parent1, Person parent2) {
         this.parent1 = parent1;
         this.parent2 = parent2;
-        this.parent1.coupled = true;
-        this.parent2.coupled = true;
+        this.parent1.setCoupled(true);
+        this.parent2.setCoupled(true);
     }
 
     public void giveBirthToOffspringUntilFemale() {
@@ -29,11 +32,15 @@ public class Couple {
     public int getChildrenCountBySex(Sex sex) {
         int childrenCount = 0;
         for (Person person : this.children) {
-            if (person.sex == sex) {
+            if (person.getSex() == sex) {
                 childrenCount += 1;
             }
         }
         return childrenCount;
+    }
+
+    public List<Person> getChildren() {
+        return children;
     }
 
     @Override
