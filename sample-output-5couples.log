@@ -1,3 +1,13 @@
+Legend:
+    M - male
+    F - female
+    Number near the sex means person ID
+    Sign near person ID means whether he/she is married or not.
+Example:
+    "M33-" - Non-married male with ID = 33.
+    "F91+" - Married female with ID = 91.
+    "[F100+ + M104+] -> [M109-, F110-] - Female #100 and male #104 generated two children: male #109 and female #110
+
 Initial kingdom
 [M1+ + F2+] -> []
 [M3+ + F4+] -> []
