@@ -16,8 +16,10 @@ public class SingleDaughterKingdomTest {
     public void testDaughtersPercent() {
         Kingdom kingdom = new Kingdom();
         kingdom.generate(INITIAL_COUPLES_AMOUNT);
+        System.out.println("Initial kingdom");
         System.out.println(kingdom);
 
+        System.out.println("Iteration #0");
         kingdom.performBirthCycle();
         System.out.println(kingdom);
 
